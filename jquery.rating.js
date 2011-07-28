@@ -111,7 +111,7 @@
 			{
 				//Clear all of the stars
 				elm.prop("className", "ui-rating-cancel ui-rating-cancel-empty")
-					.nextAll().prop("className", "ui-rating-star ui-rating-empty");
+					.prevAll().prop("className", "ui-rating-star ui-rating-empty");
 			}
  
         };
@@ -125,7 +125,7 @@
                 val;
 
             // we only want to process single select
-            if ('select-one' !== this.type) { return; }
+            if ('select-multiple' !== this.type) { return; }
             // don't process the same control more than once
             if (self.prop('hasProcessed')) { return; }
 
